@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+
+  <!-- <script src="/node_modules/angular/angular.js"></script> -->
+  
+  <script src="app.js"></script>
+  <!--   <script src="controllers/mainCtrl.js"></script> -->
+    <!-- <script src="app/controllers/ContactCtrl.js"></script>
+    <script src="app/controllers/ShowsCtrl.js"></script>
+    <script src="app/controllers/MusicCtrl.js"></script>
+    <script src="app/controllers/MerchCtrl.js"></script> -->
+
+  <title>Ruth Collins</title>
+</head>
+<body ng-app="ruthCollinsArtist">
+  <nav class="">
+      <div class="">
+        <a href="/#/" class="brand-logo">Ruth Collins</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <li><a href="/#/main">Main</a></li>
+         <li><a href="/#/shows">Shows</a></li>
+         <li><a href="/#/contact">Contact</a></li>
+         <li><a href="/#/music">Music</a></li>
+         <li><a href="/#/merch">Merch</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  <div ui-view></div>
+
+  </body>
+</html>
