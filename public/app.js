@@ -1,6 +1,6 @@
-// var angular = require('angular');
+var app = angular.module('ruthCollinsArtist', ['ui-router'])
 
-var app = angular.module('ruthCollinsArtist', []);
+
 
 console.log('Ruth Collins App Module');
 
