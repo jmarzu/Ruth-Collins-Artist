@@ -1,30 +1,33 @@
-var app = angular.module('ruthCollinsArtist', ['ui.router', 'ngAnimate']);
+var app = angular.module('ruthCollinsArtist', ['ui.bootstrap'])
 
-	console.log('Ruth Collins App Module')
+app.controller('MainCtrl', function($scope) {
+  $scope.name = 'Ruth Collins, this is working';
 
-	app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
-		function($stateProvider, $urlRouterProvider, $locationProvider) {	
-		  	$urlRouterProvider.otherwise('/');
+});
 
-			$stateProvider
-				.state('main', {
-					url: '/main',
-					controller: 'MainCtrl',
-					controllerAs: 'vm',
-					templateUrl: 'views/main.html'
-				})
-				.state('art', {
-					url: '/art',
-					controller: 'ArtCtrl',
-					controllerAs: 'vm',
-					templateUrl: 'views/art.html'
-				})
-				.state('contact', {
-					url: '/contact',
-					controller: 'ContactCtrl',
-					controllerAs: 'vm',
-					templateUrl: 'views/contact.html'
-				});
-	}]);			
+app.controller('CarouselCtrl', function ($scope) {
+  $scope.myInterval = 5000;
+  $scope.noWrapSlides = false;
+  $scope.active = 0;
+ 
+  var slides = $scope.slides = [];
+  var currIndex = 0;
 
+  $scope.addSlide = function() {
+    var newWidth = 600 + slides.length + 1;
+    slides.push({
+      image: '//unsplash.it/' + newWidth + '/300',
+      text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
+      id: currIndex++
+    });
+  };
 
+  $scope.randomize = function() {
+    var indexes = generateIndexesArray();
+    assignNewIndexesToSlides(indexes);
+  };
+
+  for (var i = 0; i < 4; i++) {
+    $scope.addSlide();
+  }
+});
