@@ -6,32 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
     <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.1.js"></script>
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <script src="app.js"></script>
 
   <title>Ruth Collins</title>
 
   </head>
-  <body class="container" ng-controller="MainCtrl">
-    <header>
-      <h1>Ruth Collins</h1>
-      <ul class="nav navbar-nav">
-         <li><a href="/#/main">Main</a></li>
-         <li><a href="/#/art">Art</a></li>
-         <li><a href="/#/contact">Contact</a></li>
-      </ul>
+  <body class="container">
+    <header class="rc-header">
+      <nav class="rc-header__nav">
+        <h1>Ruth Collins</h1>
+        <ul class="rc-header__nav-list">
+           <li><a href="/#/main">Main</a></li>
+           <li><a href="/#/art">Art</a></li>
+           <li><a href="/#/contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    
-    <section class="index-page">
+
+    <section ng-controller="MainCtrl" class="rc-paintings">
+      <div ng-repeat="painting in paintings">
+        <img class="rc-paintings__img" ng-src="{{ painting }}">
+      </div>    
+    </section>
+
+    <section ng-controller="ModalCtrl as vm" class="modal-demo">
+      <script type="text/ng-template" id="myModalContent.html">
+          <div class="modal-header">
+              <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+          </div>
+          <div class="modal-body" id="modal-body">
+              <ul>
+                  <li ng-repeat="item in vm.items">
+                      <a href="#" ng-click="$event.preventDefault(); vm.selected.item = item">{{ item }}</a>
+                  </li>
+              </ul>
+              Selected: <b>{{ vm.selected.item }}</b>
+          </div>
+          <div class="modal-footer">
+              <button class="btn btn-primary" type="button" ng-click="vm.ok()">OK</button>
+              <button class="btn btn-warning" type="button" ng-click="vm.cancel()">Cancel</button>
+          </div>
+      </script>
+
+      <button type="button" class="btn btn-default" ng-click="vm.open('lg')">Large modal</button>
+    </section>
+  
+
+    <!-- <section class="index-page">
       <h2>Main Page</h2>
       <h4>{{ name }}</h4>
       <div ng-controller="CarouselCtrl">
-        <div ng-style="{ 'height': '305px'; 'width': '600px' }" id="index-page__carousel">
+        <div style="height: 305px; width: 600px " class="index-page__carousel">
           <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
             <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
               <img ng-src="{{slide.image}}" style="margin:auto;">
@@ -51,7 +82,7 @@
     <section>
       <h2>Contact Ruth Collins</h2>
     </section>
-
+ -->
     <!-- Bootstrap JavaScript -->
     <script src="//code.jquery.com/jquery.js"></script>
 
