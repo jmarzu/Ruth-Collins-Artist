@@ -1,5 +1,45 @@
+<<<<<<< HEAD
 .index-page__carousel {
 	height: 300px; 
 	width: 600px
 	padding-top: 21px;
+=======
+.rc-header {
+  position: relative;
+  height: 100px;
+>>>>>>> a015561ada9a4bd9163b83494824491a06343838
 }
+
+.rc-header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rc-header__nav-list {
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.rc-header__nav-list li {
+  display: inline-block;
+  padding: 0 5px 0;
+  font-size: 25px;
+}
+
+.rc-paintings {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.rc-paintings__img {
+  border: 1px solid #eaeaea;
+  height: 160px;  
+  margin: 5px; 
+}
+
+
+

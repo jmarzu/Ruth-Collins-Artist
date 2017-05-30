@@ -23,5 +23,8 @@
     "mongoose": "^4.9.6",
     "morgan": "^1.8.1",
     "path": "^0.12.7"
+  },
+  "browser": {
+    "angular": "./node_modules/angular/angular.js"
   }
 }
