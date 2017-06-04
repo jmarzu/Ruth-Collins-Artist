@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  console.log('This is JavaScript, no this is Patrick');
+  console.log('Yeah, yeah I am lorde.');
 
   $('.parallax').parallax();
 });
