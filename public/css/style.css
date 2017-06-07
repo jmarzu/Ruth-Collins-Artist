@@ -3,7 +3,6 @@ section {
 }
 .rc-header {
   position: relative;
-  height: 100px;
 }
 
 .rc-header__nav {
@@ -17,7 +16,7 @@ section {
 .rc-header__nav-list li a {
   font-weight: bold;
   padding: 0 20px 0;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .parallax__row__1 {
@@ -25,6 +24,7 @@ section {
   align-items: center;
   justify-content: space-around;
   padding: 2% 0;
+  height: 500px;
 }
 
 .parallax__row__2 {
@@ -38,16 +38,14 @@ section {
 
 .parallax__row__1 .parallax-container {
   width: 40%;
-  height: 900px;
 }
 
 .parallax__row__2 .parallax-container {
   width: 75%;
-  height: 600px;
 }
 
 .parallax__copy p {
-  font-size: 25px;
+  font-size: 14px;
 }
 
 .parallax__copy .parallax-container {
