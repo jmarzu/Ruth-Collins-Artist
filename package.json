@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "watchify public/index.js -o public/bundle.js",
+    "build": "browserify public/index.js -o public/bundle.js",
+    "start": "npm run watch & nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,12 +21,12 @@
   "dependencies": {
     "angular": "^1.6.4",
     "body-parser": "^1.17.1",
+    "browserify": "^14.4.0",
     "express": "^4.15.2",
+    "jquery": "^3.2.1",
     "mongoose": "^4.9.6",
     "morgan": "^1.8.1",
-    "path": "^0.12.7"
-  },
-  "browser": {
-    "angular": "./node_modules/angular/angular.js"
+    "path": "^0.12.7",
+    "watchify": "^3.9.0"
   }
 }
