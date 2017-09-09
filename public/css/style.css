@@ -1,11 +1,12 @@
 body  {
+  margin: 0 auto;
   background-color: lightblue;
 }
 
 /* Header Section */
 .rc-header {
   position: relative;
-  margin-top: -400px;
+  margin-top: -415px;
 }
 
 .rc-header__img {
@@ -15,15 +16,16 @@ body  {
 
 .rc-header__copy {
   position: absolute;
-  top: 41%;
+  top: 42.5%;
   left: 25%;
   transform: translateY(-50%);
 }
 
 .rc-header h1 {
   font-family: 'Dancing Script', cursive;
+  font-weight: lighter;
   text-align: center;
-  font-size: 100px;
+  font-size: 75px;
   color: white;
 }
 
@@ -36,46 +38,7 @@ body  {
 
 .rc-header__list li a {
   color: white;
-  font-size: 30px;
-}
-
-/* About and Contact Sections */
-
-.rc-about, .rc-contact {
-  position: relative;
-}
-
-.rc-about__copy  {
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  transform: translateY(-50%);
-  width: 45%;
-}
-
-.rc-about__copy h4 {
-  font-family: 'Dancing Script', cursive;
-}
-
-.rc-about__copy p {
-  width: 80%;
-}
-
-.rc-contact__copy {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translateY(-50%);
-}
-
-.rc-about__img, .rc-contact__img, .rc-main-page__img {
-  height: 100%;
-  width: 100%;
-}
-
-.img1 {
-  background: url('/images/StMarysSailing.jpg') no-repeat center center;
-  background-size: cover;
+  font-size: 25px;
 }
 
 /* Art Section */
@@ -89,7 +52,8 @@ body  {
 .rc-main-page-art__title {
   font-family: 'Dancing Script', cursive;
   text-align: center;
-  font-size: 100px;
+  font-size: 75px;
+  margin: 10px auto;
 }
  
 .rc-main-page__art {
@@ -174,6 +138,56 @@ only screen and (max-device-width : 599px){
   .rc-main-page-art {
     width: 400px;
   }
+}
+
+
+/* About Section */
+
+.rc-about {
+  position: relative;
+}
+
+.rc-about__copy  {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 45%;
+}
+
+.rc-about__copy h2 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: lighter;
+  margin: 10px auto;
+}
+
+.rc-about__copy p {
+  width: 80%;
+}
+
+/* Contact Section */
+
+.rc-contact {
+  position: relative;
+  margin-top: -145px;
+  z-index: -1;
+}
+
+.rc-contact__copy {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+}
+
+.rc-about__img, .rc-contact__img, .rc-main-page__img {
+  height: auto;
+  width: 100%;
+}
+
+.img1 {
+  background: url('/images/StMarysSailing.jpg') no-repeat center center;
+  background-size: cover;
 }
 
 
