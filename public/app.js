@@ -1,8 +1,10 @@
-// $(document).ready(function(){
+var $ = require('jQuery');
+var smoothScroll = require('jquery-smooth-scroll')
 
-//   console.log('Yeah, yeah I am lorde.');
+$(document).ready(function(){
 
-//   $('.parallax').parallax();
-// });
-
-console.log('oh yeah');
+	$('#contact').on('click', function() {
+		$.smoothScroll();
+	});
+	
+});

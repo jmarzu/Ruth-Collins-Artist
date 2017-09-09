@@ -49,10 +49,10 @@
   width: 80%;
 }
 
-.rc-contact__form {
+.rc-contact__copy {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 20%;
   transform: translateY(-50%);
 }
 
@@ -65,7 +65,6 @@
   background: url('/images/StMarysSailing.jpg') no-repeat center center;
   background-size: cover;
 }
-
 
 
 
