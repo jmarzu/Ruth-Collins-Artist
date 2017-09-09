@@ -29,16 +29,42 @@
   font-size: 30px;
 }
 
-.rc-main-page__img {
+.rc-about, .rc-contact {
+  position: relative;
+}
+
+.rc-about__copy  {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 45%;
+}
+
+.rc-about__copy h4 {
+  font-family: 'Dancing Script', cursive;
+}
+
+.rc-about__copy p {
+  width: 80%;
+}
+
+.rc-contact__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+
+.rc-about__img, .rc-contact__img, .rc-main-page__img {
   height: 100%;
   width: 100%;
+}
+
+.img1 {
   background: url('/images/StMarysSailing.jpg') no-repeat center center;
   background-size: cover;
 }
-
-
-
-
 
 
 

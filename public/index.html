@@ -27,6 +27,63 @@
 
     <section class="rc-main-page__img img1"></section>
 
+    <section class="re-main-page__art">
+      <p>art goes here, small grid of art</p>
+    </section>
+
+    <section class="rc-about">
+      <img class="rc-about__img" src="/images/NoonWatchMyrtleBeach.jpg">
+      <div class="rc-about__copy">
+        <h4>Ruth Collins</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      </div>
+    </section>
+
+    <section class="rc-contact">
+      <img class="rc-contact__img" src="/images/MonumentValleyNavajoTribalPark.jpg">
+      <div class="rc-contact__copy">
+        <div class="container" id="contact">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="title">Contact Ruth Collins</h2>
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form name="sentMessage" id="contactForm" action="https://formspree.io/jmarzu13@gmail.com" method="POST" >
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name." name="name">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address." name="email">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message." name="message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script src="bundle.js"></script>
