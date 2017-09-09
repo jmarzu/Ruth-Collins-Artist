@@ -1,10 +1,8 @@
-body {
+.rc-header {
   position: absolute;
-  background: url('/images/CornerTavern-wide.jpg') no-repeat center center;
-  background-size: cover;
 }
 
-header {
+.rc-header__copy {
   position: relative;
   top: 50%;
   left: 50%;
@@ -30,3 +28,21 @@ header {
   color: white;
   font-size: 30px;
 }
+
+.rc-main-page__img {
+  height: 100%;
+  width: 100%;
+  background: url('/images/StMarysSailing.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
