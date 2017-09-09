@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/jmarzu/Ruth-Collins-Artist#readme",
   "dependencies": {
-    "angular": "^1.6.4",
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6",
     "body-parser": "^1.17.1",
     "browserify": "^14.4.0",
     "express": "^4.15.2",
