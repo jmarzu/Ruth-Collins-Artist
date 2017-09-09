@@ -1,61 +1,32 @@
-section {
-  padding-bottom: 3%;
+body {
+  position: absolute;
+  background: url('/images/CornerTavern-wide.jpg') no-repeat center center;
+  background-size: cover;
 }
-.rc-header {
+
+header {
   position: relative;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translateY(50%);
 }
 
-.rc-header__nav {
+.rc-header h1 {
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+}
+
+.rc-header__list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #111;
-  padding: 40px 10px;
-}
-
-.rc-header__nav-list li a {
-  font-weight: bold;
-  padding: 0 20px 0;
-  font-size: 18px;
-}
-
-.parallax__row__1 {
-  display: flex;
-  align-items: center;
   justify-content: space-around;
-  padding: 2% 0;
-  height: 500px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
-.parallax__row__2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row-reverse;
-  height: 400px;
-  padding: 2% 0;
+.rc-header__list li a {
+  color: white;
+  font-size: 30px;
 }
-
-.parallax__row__1 .parallax-container {
-  width: 40%;
-}
-
-.parallax__row__2 .parallax-container {
-  width: 75%;
-}
-
-.parallax__copy p {
-  font-size: 14px;
-}
-
-.parallax__copy .parallax-container {
-
-}
-
-.rc-footer {
-  padding-top: 20px;
-  background-color: grey;
-}
-
-
-
