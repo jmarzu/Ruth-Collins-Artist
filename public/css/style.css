@@ -46,22 +46,29 @@ body  {
 .rc-main-page-art {
   width: 100%;
   margin: 0 auto;
-  margin-bottom: -75px;
+  margin-bottom: -200px;
+}
+
+@media only screen and (min-width : 1260px) {
+  .rc-main-page-art {
+    margin-bottom: -225px;
+  }
 }
 
 .rc-main-page-art__title {
   font-family: 'Dancing Script', cursive;
+  font-weight: lighter;
   text-align: center;
   font-size: 75px;
   margin: 10px auto;
 }
  
 .rc-main-page__art {
-  -moz-column-count: 3;
+  -moz-column-count: 4;
   -moz-column-gap: 0px;
-  -webkit-column-count: 3;
+  -webkit-column-count: 4;
   -webkit-column-gap: 0px;
-  column-count: 3;
+  column-count: 4;
   column-gap: 0px;
 }
  
