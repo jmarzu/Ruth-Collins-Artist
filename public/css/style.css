@@ -1,8 +1,5 @@
-/*import 'bootstrap-css'*/
-
 body  {
   margin: 0 auto;
-  background-color: lightblue;
 }
 
 /* Header Section */
@@ -38,7 +35,7 @@ body  {
   margin-right: 20%;
 }
 
-.rc-header__list li a {
+.rc-header__list a {
   color: white;
   font-size: 25px;
 }
@@ -174,6 +171,7 @@ only screen and (max-device-width : 599px){
   width: 80%;
 }
 
+
 /* Contact Section */
 
 .rc-contact {
@@ -184,9 +182,14 @@ only screen and (max-device-width : 599px){
 
 .rc-contact__copy {
   position: absolute;
-  top: 50%;
-  left: 20%;
+  top: 57.5%;
+  left: 22.5%;
   transform: translateY(-50%);
+  width: 32.5%;
+}
+
+.rc-contact-cpoy__form {
+  width: 100%;
 }
 
 .rc-about__img, .rc-contact__img, .rc-main-page__img {
@@ -200,6 +203,25 @@ only screen and (max-device-width : 599px){
 }
 
 
+/* Footer Section */
+
+.rc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+}
+
+.rc-footer h2 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.rc-footer-social-media__links a i {
+  margin: 0 5px;
+  font-size: 20px;
+}
 
 
 

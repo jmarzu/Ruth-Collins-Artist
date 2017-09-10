@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     
     <title>Ruth Collins</title>
@@ -17,11 +18,11 @@
       <img class="rc-header__img" src="images/StMarysSailing.jpg">
       <div class="rc-header__copy">
         <h1>Ruth Collins Artist</h1>
-        <ul class="rc-header__list">
-           <li><a href="#art">Art</a></li>
-           <li><a href="#contact">Contact</a></li>
-           <li><a href="#about">Artist</a></li>
-        </ul>
+        <div class="rc-header__list">
+           <a href="#art">Art</a>
+           <a href="#about">Artist</a>
+           <a href="#contact">Contact</a>
+        </div>
       </div>
     </header>
 
@@ -72,45 +73,42 @@
 
     <section class="rc-contact">
       <img class="rc-contact__img" src="/images/MonumentValleyNavajoTribalPark.jpg">
-      <div class="rc-contact__copy">
-        <div id="contact">
-            <div>
-                <div>
-                    <h2>Contact Ruth Collins</h2>
-                    <hr />
+      <div class="rc-contact__copy"  id="contact">
+        <h2>Contact Ruth Collins</h2>
+        <hr />
+        <div class="row">
+            <form class="rc-contact-cpoy__form" name="sentMessage" id="contactForm" action="https://formspree.io/ruthCollins@gmail.com" method="POST" >
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name." name="name">                        
                 </div>
-            </div>
-            <div>
-                <div>
-                    <form name="sentMessage" id="contactForm" action="https://formspree.io/ruthCollins@gmail.com" method="POST" >
-                        <div>
-                            <div>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name." name="name">
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address." name="email">
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <textarea rows="5" placeholder="Message" id="message" required data-validation-required-message="Please enter a message." name="message"></textarea>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div>
-                                <button type="submit" class="btn btn-success btn-lg">Send</button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address." name="email">
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea rows="5" placeholder="Pleae enter a message" class="form-control" id="message" required name="message"></textarea>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div>
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Send</button>
+                </div>
+            </form>
         </div>
       </div>
     </section>
+
+    <footer class="rc-footer">
+      <h2>Ruth Collins Artist</h2>
+      <div class="rc-footer-social-media__links">
+        <a href=""><i class="fa fa-facebook"></i>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-envelope"></i></a>
+      </div>
+    </footer>
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
