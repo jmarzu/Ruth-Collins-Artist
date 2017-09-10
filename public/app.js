@@ -1,10 +1,15 @@
-var $ = require('jQuery');
-var smoothScroll = require('jquery-smooth-scroll')
+global.jQuery = require('jquery');
+require('bootstrap');
 
-$(document).ready(function(){
+console.log('ya ya it works');
 
-	$('#contact').on('click', function() {
-		$.smoothScroll();
-	});
+// var $ = require('jQuery');
+// var smoothScroll = require('jquery-smooth-scroll')
+
+// $(document).ready(function(){
+
+// 	$('#contact').on('click', function() {
+// 		$.smoothScroll();
+// 	});
 	
-});
+// });

@@ -1,3 +1,5 @@
+/*import 'bootstrap-css'*/
+
 body  {
   margin: 0 auto;
   background-color: lightblue;
@@ -25,7 +27,7 @@ body  {
   font-family: 'Dancing Script', cursive;
   font-weight: lighter;
   text-align: center;
-  font-size: 75px;
+  font-size: 80px;
   color: white;
 }
 
@@ -46,12 +48,12 @@ body  {
 .rc-main-page-art {
   width: 100%;
   margin: 0 auto;
-  margin-bottom: -200px;
+  margin-bottom: -135px;
 }
 
 @media only screen and (min-width : 1260px) {
   .rc-main-page-art {
-    margin-bottom: -225px;
+    margin-bottom: -152px;
   }
 }
 
@@ -60,7 +62,7 @@ body  {
   font-weight: lighter;
   text-align: center;
   font-size: 75px;
-  margin: 10px auto;
+  margin: 25px auto;
 }
  
 .rc-main-page__art {
