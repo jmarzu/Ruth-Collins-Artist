@@ -1,15 +1,10 @@
-// global.jQuery = require('jquery');
-// require('bootstrap');
-
-console.log('ya ya it works');
-
 var $ = require('jQuery');
 
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
-  .click(function(event) {
+  .on('click', function(event) {
     // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
@@ -25,7 +20,7 @@ $('a[href*="#"]')
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 1000, function() {
+        }, 1250, function() {
           // Callback after animation
           // Must change focus!
           var $target = $(target);
