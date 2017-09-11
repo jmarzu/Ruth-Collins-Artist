@@ -151,11 +151,12 @@ only screen and (max-device-width : 599px){
 
 .rc-about {
   position: relative;
+  z-index: 1;
 }
 
 .rc-about__copy  {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 10%;
   transform: translateY(-50%);
   width: 45%;
@@ -165,10 +166,12 @@ only screen and (max-device-width : 599px){
   font-family: 'Dancing Script', cursive;
   font-weight: lighter;
   margin: 10px auto;
+  font-size: 100px;
 }
 
 .rc-about__copy p {
-  width: 80%;
+  font-size: 22px;
+  line-height: 1.75;
 }
 
 
@@ -177,7 +180,6 @@ only screen and (max-device-width : 599px){
 .rc-contact {
   position: relative;
   margin-top: -145px;
-  z-index: -1;
 }
 
 .rc-contact__copy {
