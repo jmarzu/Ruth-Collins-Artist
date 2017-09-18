@@ -151,15 +151,26 @@ only screen and (max-device-width : 599px){
 
 .rc-about {
   position: relative;
+  background-color: #662e2e;
   z-index: 1;
 }
 
+.rc-about__img {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*.rc-about__ruth-img {
+  border-radius: 50%;
+}*/
+
+.img {
+  margin: 3%;
+}
+
 .rc-about__copy  {
-  position: absolute;
-  top: 35%;
-  left: 10%;
-  transform: translateY(-50%);
-  width: 45%;
+  margin: 2% 5% 3%;
+  color: white;
 }
 
 .rc-about__copy h2 {
@@ -179,7 +190,7 @@ only screen and (max-device-width : 599px){
 
 .rc-contact {
   position: relative;
-  margin-top: -145px;
+  /*margin-top: -145px;*/
 }
 
 .rc-contact__copy {
