@@ -151,8 +151,8 @@ only screen and (max-device-width : 599px){
 
 .rc-about {
   position: relative;
-  background-color: #662e2e;
-  z-index: 1;
+  /*background-color: #662e2e;*/
+  margin-top: 200px;
 }
 
 .rc-about__img {
@@ -170,18 +170,22 @@ only screen and (max-device-width : 599px){
 
 .rc-about__copy  {
   margin: 2% 5% 3%;
-  color: white;
 }
 
 .rc-about__copy h2 {
   font-family: 'Dancing Script', cursive;
   font-weight: lighter;
   margin: 10px auto;
-  font-size: 100px;
+  font-size: 75px;
+}
+
+.rc-about__copy h4 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
 }
 
 .rc-about__copy p {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.75;
 }
 
