@@ -22,7 +22,7 @@
            <a href="#art">Art</a>
            <a href="#about">Artist</a>
            <a href="#contact">Contact</a>
-           <a href="#">More Paintings</a>
+           <!-- <a href="#">More Paintings</a> -->
         </div>
       </div>
     </header>
@@ -87,25 +87,22 @@ military operations all provide her with inspiration. She paints in acrylics and
     <section class="rc-contact">
       <img class="rc-contact__img" src="/images/MonumentValleyNavajoTribalPark.jpg">
       <div class="rc-contact__copy"  id="contact">
-        <h3>Contact Ruth Collins for Commisions</h3>
+        <h2>Contact Ruth Collins for Commisions</h2>
         <hr />
         <div class="row">
-            <form class="rc-contact-cpoy__form" name="sentMessage" id="contactForm" action="https://formspree.io/rscollins9@gmail.com" method="POST" >
+            <form class="rc-contact-copy__form" name="sentMessage" id="contactForm" action="https://formspree.io/rscollins9@gmail.com" method="POST" >
                 <div class="form-group">
-                  <label for="name">Name</label>
                   <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name." name="name">                        
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address</label>
                     <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address." name="email">
                 </div>
                 <div class="form-group">
-                    <label for="message">Message</label>
                     <textarea rows="5" placeholder="Pleae enter a message" class="form-control" id="message" required name="message"></textarea>
                 </div>
                 <br>
                 <div id="success"></div>
-                  <button type="submit" class="btn btn-success btn-lg btn-block">Send</button>
+                  <button type="submit" class="btn btn-lg btn-block rc-contact__btn">Send</button>
             </form>
         </div>
       </div>
