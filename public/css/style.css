@@ -77,6 +77,15 @@ body  {
   width: 100%;
 }
 
+.rc-main-page-art__copy {
+  margin: 50px 10px;
+  padding: 20px 5px;
+}
+
+.rc-main-page-art__copy p {
+  font-size: 24px;
+}
+
 @media only screen and (max-width : 1199px),
 only screen and (max-device-width : 1199px){
   .rc-main-page__art {
@@ -210,6 +219,11 @@ only screen and (max-device-width : 599px){
 }
 
 .rc-contact__btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rc-contact__btn button {
   background-color: #056571;
   color: white;
 }
