@@ -78,11 +78,13 @@ body  {
 }
 
 .rc-main-page-art__copy {
-  margin: 50px 10px;
-  padding: 20px 5px;
+  margin: 225px 10px;
+  padding: 25px 5px;
 }
 
 .rc-main-page-art__copy p {
+  width: 65%;
+  margin-left: 20px;
   font-size: 24px;
 }
 
