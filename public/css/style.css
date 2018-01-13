@@ -28,6 +28,14 @@ body  {
   color: white;
 }
 
+.rc-header h3 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+}
+
 .rc-header__list {
   display: flex;
   justify-content: space-around;
@@ -260,6 +268,12 @@ only screen and (max-device-width : 599px){
   margin: 0 10px;
   font-size: 22.5px;
   text-decoration: none;
+}
+
+/* Modal Styles */
+
+.modal-img {
+  width: 100%;
 }
 
 

@@ -10254,7 +10254,12 @@ return jQuery;
 } );
 
 },{}],2:[function(require,module,exports){
-var $ = require('jQuery');
+var $ = require('jquery');
+// var slick = require('slick-carousel');
+
+$(document).ready(function() {
+
+
 
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -10292,5 +10297,15 @@ $('a[href*="#"]')
     }
   });
 
+  // $('.fade').slick({
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   fade: true,
+  //   cssEase: 'linear'
+  // });
 
-},{"jQuery":1}]},{},[2]);
+});
+
+
+},{"jquery":1}]},{},[2]);
