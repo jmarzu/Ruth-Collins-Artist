@@ -1,11 +1,9 @@
 var $ = require('jquery');
-// var slick = require('slick-carousel');
+var slick = require('slick-carousel');
 
 $(document).ready(function() {
 
-
-
-$('a[href*="#"]')
+  $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
@@ -41,13 +39,13 @@ $('a[href*="#"]')
     }
   });
 
-  // $('.fade').slick({
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   fade: true,
-  //   cssEase: 'linear'
-  // });
+  $('.variable-width').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    fade: true
+  });
 
 });
 

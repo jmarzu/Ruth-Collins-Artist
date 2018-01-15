@@ -7,6 +7,11 @@
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+
   
     <link rel="stylesheet" type="text/css" href="css/style.css">
     
@@ -24,49 +29,44 @@
            <a href="#art">Paintings</a>
            <a href="#about">Artist</a>
            <a href="#contact">Contact</a>
+           <a href="/payment">Payment</a>
         </div>
       </div>
     </header>
 
     <section class="rc-main-page-art" id="art">
       <h1 class="rc-main-page-art__title">Art by Ruth S. Collins</h1>
-      <div class="rc-main-page__art" >
-        <img src="images/FourBirds_Proof2-square.jpg">
-        <img src="images/VanishingPoint.jpg">
-        <img src="images/All-American-wide.jpg">
-        <img src="images/GreenPeace-wide.jpg">
-        <img src="images/SundayMorning.jpg">
-        <img src="images/CallawayDownpour-tall.jpg">
-        <img src="images/Stop+SlowTraffic.jpg">
-        <img src="images/CabinOnTheRollingRoad-square.jpg">
-        <img src="images/StormstotheSouth.jpg">
-        <img src="images/DontLookBack-tall.jpg">
-      </div>
 
-      <div class="container">
-        <h2>Basic Modal Example</h2>
-        <!-- Trigger the modal with a button -->
-        <a data-toggle="modal" data-target="#myModal"><img src="images/SpringTraining.jpg"></a>
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Spring Training</h4>
-              </div>
-              <div class="modal-body">
-                <img class="modal-img" src="images/SpringTraining.jpg">
-                <p>Father and son practicing for the big game</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
+      <div class="variable-width">
+        <div>
+          <a data-toggle="modal" data-target="#CornerTavernModal">
+            <img src="images/CornerTavern-wide.jpg">
+          </a>
+        </div>
+        <div>
+          <a data-toggle="modal" data-target="#SpringTrainingModal">
+            <img src="images/SpringTraining.jpg">
+          </a>
+        </div>
+        <div>
+          <a data-toggle="modal" data-target="#AllAmericanModal">
+            <img src="images/All-American-wide.jpg">
+          </a>
+        </div>
+        <div>
+          <a data-toggle="modal" data-target="#GreenPeaceModal">
+            <img src="images/GreenPeace-wide.jpg">
+          </a>
+        </div>
+        <div>
+          <a data-toggle="modal" data-target="#StormsToTheSouthModal">
+            <img src="images/StormstotheSouth.jpg">
+          </a>
+        </div>
+        <div>
+          <a data-toggle="modal" data-target="#AutumnGreensModal">
+            <img src="images/AutumnGreens-wide.jpg">
+          </a>
         </div>
       </div>
 
@@ -78,20 +78,7 @@
         </p>
       </div>
 
-      <div class="rc-main-page__art">
-        <img src="images/CornerTavern-wide.jpg">
-        <img src="images/SpringtimeInBaltimore.jpg">
-        <img src="images/ComingBackIn-square.jpg">
-        <img src="images/StMarysProdigy.jpg">
-        <img src="images/sleepyHound.jpg">
-        <img src="images/SotterlySummer.jpg">
-        <img src="images/SunsetOverThePatuxent.jpg">
-        <img src="images/GreatMillsBarberShop-square.jpg">
-        <img src="images/Caitlin.jpg">
-        <img src="images/CaughtNapping.jpg">
-      </div>
-
-      <div class="rc-main-page-art__copy">
+      <!-- <div class="rc-main-page-art__copy">
         <p>
           She settled in St. Mary’s County after graduation, since it had become her
           new home after 4 years of college there. She loved the diverse landscape of
@@ -99,7 +86,7 @@
           and Patuxent Rivers. Farmers, watermen, Amish, historic buildings, and
           military operations all provide her with inspiration.
         </p>
-      </div>
+      </div> -->
 
       <div class="rc-main-page__art">
         <img src="images/childLollyPop.jpg">
@@ -166,14 +153,137 @@
       <h2>Ruth S. Collins</h2>
       <div class="rc-footer-social-media__links">
         <a href="https://www.facebook.com/ArtworkByRuthS.Collins/"><i class="fa fa-facebook"></i>
-        <a href=""><i class="fa fa-cc-paypal"></i></a>
+        <a href="https://www.paypal.com/us/webapps/mpp/send-money-online"><i class="fa fa-cc-paypal"></i></a>
         <a href="https://www.freelanced.com/ruthcollins"><i class="fa fa-envelope"></i></a>
       </div>
     </footer>
 
+    <!-- Modal section -->
+      <!-- Modal -->
+      <div class="modal fade" id="SpringTrainingModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Spring Training</h4>
+            </div>
+            <div class="modal-body">
+              <p>Father and son practicing for the big game</p> -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="CornerTavernModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Corner Tavern</h4>
+            </div>
+            <div class="modal-body">
+              <p>Everything you need on the corner</p> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="AllAmericanModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">All American</h4>
+            </div>
+            <div class="modal-body">
+              <p>All American</p> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="AllAmericanModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">All American</h4>
+            </div>
+            <div class="modal-body">
+              <p>All American</p> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="StormsToTheSouthModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Storms To The South</h4>
+            </div>
+            <div class="modal-body">
+              <p>The south has storms</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="AutumnGreensModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Autumn Green</h4>
+            </div>
+            <div class="modal-body">
+              <p>Autumn is Green</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="bundle.js"></script>
-
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
   </body>
 </html>

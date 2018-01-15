@@ -13,9 +13,15 @@ app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); /
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
-app.get('/*', function(req, res) {
+app.use('/js', express.static(__dirname + '/node_modules/slick-carousel/slick'))
+
+app.get('/home', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
+
+app.get('/payment', function(req, res) {
+	res.sendFile(path.join(__dirname, 'public/views/payment.html'));
+})
 
 var server = app.listen(process.env.PORT || 3000);
 

@@ -19,8 +19,6 @@
   },
   "homepage": "https://github.com/jmarzu/Ruth-Collins-Artist#readme",
   "dependencies": {
-    "angular": "^1.6.6",
-    "angular-route": "^1.6.6",
     "body-parser": "^1.17.1",
     "bootstrap": "^3.3.7",
     "bootstrap-css": "^4.0.0-alpha.5",
@@ -34,7 +32,7 @@
     "morgan": "^1.8.1",
     "navigator": "^1.0.1",
     "path": "^0.12.7",
-    "slick-carousel": "^1.7.1",
+    "slick-carousel": "^1.8.1",
     "watchify": "^3.9.0",
     "xmlhttprequest": "^1.8.0"
   },
