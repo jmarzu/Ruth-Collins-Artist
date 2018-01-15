@@ -13,9 +13,9 @@ app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); /
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
-app.use('/js', express.static(__dirname + '/node_modules/slick-carousel/slick'))
+app.use(express.static(__dirname + '/styles'));
 
-app.get('/home', function(req, res) {
+app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
