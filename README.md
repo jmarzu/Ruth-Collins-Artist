@@ -1,3 +1,3 @@
 # Ruth-Collins-Artist
 
-run with nodemon
+run with `npm start`
