@@ -96,6 +96,23 @@ body  {
   font-size: 24px;
 }
 
+/* Introduction */
+
+.rc-introduction {
+  display: flex;
+  align-items: center;
+}
+
+.rc-introduction__copy {
+  width: 65%;
+}
+
+.rc-introduction__copy p {
+  width: 65%;
+  margin-left: 20px;
+  font-size: 24px;
+}
+
 
 /* About Section */
 
