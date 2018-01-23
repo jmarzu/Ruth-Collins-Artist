@@ -70,49 +70,26 @@ body  {
   margin: 25px auto;
 }
  
-.rc-main-page__art {
-  -moz-column-count: 4;
-  -moz-column-gap: 0px;
-  -webkit-column-count: 4;
-  -webkit-column-gap: 0px;
-  column-count: 4;
-  column-gap: 0px;
-}
- 
-.rc-main-page__art img{
-  display: inline-block;
-  margin-bottom: 0px;
-  width: 100%;
-}
-
-.rc-main-page-art__copy {
-  margin: 225px 10px;
-  padding: 25px 5px;
-}
-
-.rc-main-page-art__copy p {
-  width: 65%;
-  margin-left: 20px;
-  font-size: 24px;
-}
-
 /* Introduction */
 
 .rc-introduction {
   display: flex;
   align-items: center;
+  margin: 0 5%;
 }
 
 .rc-introduction__copy {
   width: 65%;
 }
 
-.rc-introduction__copy p {
-  width: 65%;
-  margin-left: 20px;
-  font-size: 24px;
+.rc-introduction__copy h2 {
+  font-family: 'Dancing Script', cursive;
 }
 
+.rc-introduction__copy p {
+  width: 65%;
+  font-size: 20px;
+}
 
 /* About Section */
 
@@ -240,6 +217,32 @@ body  {
   height: 700px;
 }
 
+.one-time {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.one-time__img {
+  margin: 0 auto;
+  display: flex !important;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.one-time__copy {
+  border: solid black 1px;
+}
+
+.one-time__copy h1 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: lighter;
+}
+
+.one-time__copy p {
+  font-size: 16px;
+}
 
 
 

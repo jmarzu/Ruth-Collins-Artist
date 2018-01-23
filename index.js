@@ -14,8 +14,6 @@ app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); /
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
-app.use(express.static(__dirname + '/css'));
-
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
