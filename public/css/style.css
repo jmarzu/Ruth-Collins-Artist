@@ -53,13 +53,6 @@ body  {
 .rc-main-page-art {
   width: 100%;
   margin: 0 auto;
-  margin-bottom: -135px;
-}
-
-@media only screen and (min-width : 1260px) {
-  .rc-main-page-art {
-    margin-bottom: -152px;
-  }
 }
 
 .rc-main-page-art__title {
@@ -75,7 +68,7 @@ body  {
 .rc-introduction {
   display: flex;
   align-items: center;
-  margin: 0 5%;
+  margin: 10% 5% 0;
 }
 
 .rc-introduction__copy {
@@ -218,7 +211,7 @@ body  {
 }
 
 .one-time {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   height: 100%;
 }
@@ -233,6 +226,7 @@ body  {
 
 .one-time__copy {
   border: solid black 1px;
+  padding: 1%;
 }
 
 .one-time__copy h1 {
