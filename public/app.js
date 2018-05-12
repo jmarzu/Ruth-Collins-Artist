@@ -2,58 +2,14 @@ var $ = require('jquery');
 var slick = require('slick-carousel');
 
 $(document).ready(function() {
-
-  $('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .on('click', function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1250, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
-
-  $('.variable-width').slick({
+  $('.rc-landing-page__carousel').slick({
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    fade: true
+    speed: 750,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 3000
   });
-
-  $('.one-time').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    adaptiveHeight: true
-  });
-
 });
 

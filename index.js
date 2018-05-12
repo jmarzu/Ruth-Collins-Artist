@@ -18,9 +18,9 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
-app.get('/payment', function(req, res) {
-	res.sendFile(path.join(__dirname, 'public/views/payment.html'));
-})
+app.get('/home', function(req, res) {
+	res.sendFile(path.join(__dirname, 'public/views/home.html'));
+});
 
 var server = app.listen(process.env.PORT || 3000);
 
