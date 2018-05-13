@@ -22,9 +22,7 @@ nav {
 	height: 90%;
 }
 
-.rc-landing-page__carousel__copy {
-
-}
+/* Landing Page */
 
 .rc-fade__img-background-1 {
 	background: url("../images/landscapes/4_Birds.jpg") no-repeat center center;
@@ -80,5 +78,26 @@ nav {
 
 .rc-fade__img {
 	width: 100%;
+}
+
+/* About Page */
+
+.rc-about-page {
+	
+}
+
+.rc-about-page img {
+	height: auto;
+}
+.rc-about-page__copy {
+
+}
+
+.rc-about-page__copy h1 {
+
+}
+
+.rc-about-page__copy p {
+
 }
 

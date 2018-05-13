@@ -27,20 +27,10 @@
     "express": "^4.16.3",
     "express-ejs-layouts": "^2.3.1",
     "jquery": "^3.3.1",
-    "jquery-smooth-scroll": "^2.2.0",
-    "jsdom": "^11.5.1",
-    "location": "0.0.1",
-    "mongoose": "^4.9.6",
-    "morgan": "^1.8.1",
-    "navigator": "^1.0.1",
     "npm": "^6.0.1",
     "path": "^0.12.7",
     "slick-carousel": "^1.8.1",
-    "watchify": "^3.9.0",
-    "xmlhttprequest": "^1.8.0"
-  },
-  "browser": {
-    "angular": "./node_modules/angular/angular.js"
+    "watchify": "^3.9.0"
   },
   "bootstrap": {
     "depends": [

@@ -7,7 +7,6 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('morgan')('dev'));
 
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
@@ -22,11 +21,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/contact', function(req, res) {
-	res.render('partials/contact');
+	res.render('partials/contact', {title: 'Contact'});
 });
 
 app.get('/commisions', function(req, res) {
-	res.render('partials/commisions');
+	res.render('partials/contact', {title: 'Commisions'});
 });
 
 app.get('/portraits', function(req, res) {
