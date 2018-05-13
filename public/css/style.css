@@ -1,6 +1,7 @@
 body {
 	margin: 0 auto;
-	background-color: lightblue;	
+	/*background-color: #88e5fc;*/	
+	background-image: radial-gradient(#88e5fc, white);
 }
 
 nav {
@@ -51,19 +52,23 @@ nav {
 }
 
 .rc-fade__img-background-7 {
-	background: url("../images/landscapes/Ramona\'s_Mail.jpg") no-repeat center center;
+	background: url("../images/landscapes/Coming_Back_In.jpg") no-repeat center center;
 }
 
 .rc-fade__img-background-8 {
-	background: url("../images/portraits/Caught-Napping.jpg") no-repeat center center;
+	background: url("../images/portraits/Easter-1960.jpg") no-repeat center center;
 }
 
 .rc-fade__img-background-9 {
-	background: url("../images/landscapes/Lights_Out_at_the_Loma.jpg") no-repeat center center;
+	background: url("../images/landscapes/Ramona\'s_Mail.jpg") no-repeat center center;
 }
 
 .rc-fade__img-background-10 {
-	background: url("../images/portraits/Edgar.jpg") no-repeat center center;
+	background: url("../images/portraits/Words-With-Chris.jpg") no-repeat center center;
+}
+
+.rc-fade__img-background-11 {
+	background: url("../images/landscapes/September_Colors.jpg") no-repeat center center;
 }
 
 .rc-fade__img-backgrount-style {
@@ -77,10 +82,4 @@ nav {
 .rc-fade__img {
 	width: 100%;
 }
-
-/*.slick-prev:before, .slick-next:before {
-	color: darkgrey !important;
-	padding-left: 8%;
-	padding-right: 8%;
-}*/
 

@@ -4,12 +4,12 @@ var slick = require('slick-carousel');
 $(document).ready(function() {
   $('.rc-landing-page__carousel').slick({
     dots: true,
+    arrows: true,
     infinite: true,
     speed: 750,
     fade: true,
     cssEase: 'linear',
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 5000
   });
 });
-
