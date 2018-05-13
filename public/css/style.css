@@ -80,15 +80,33 @@ nav {
 	width: 100%;
 }
 
+/* Footer */
+
+.rc-footer {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.rc-footer__links {
+	margin: 0 1%;
+}
+
 /* About Page */
 
 .rc-about-page {
-	
+	margin-top: 5%;
+}
+
+.rc-about-page__hero {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .rc-about-page img {
 	height: auto;
 }
+
 .rc-about-page__copy {
 
 }
