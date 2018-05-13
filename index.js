@@ -25,6 +25,10 @@ app.get('/contact', function(req, res) {
 	res.render('partials/contact');
 });
 
+app.get('/commisions', function(req, res) {
+	res.render('partials/commisions');
+});
+
 app.get('/portraits', function(req, res) {
 	res.render('partials/portraits');
 });
