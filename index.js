@@ -9,17 +9,32 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('morgan')('dev'));
 
+app.set('view engine', 'ejs');
+app.use(ejsLayouts);
+
 // Bootstrap
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+  res.render('partials/main');
 });
 
-app.get('/home', function(req, res) {
-	res.sendFile(path.join(__dirname, 'public/views/home.html'));
+app.get('/contact', function(req, res) {
+	res.render('partials/contact');
+});
+
+app.get('/portraits', function(req, res) {
+	res.render('partials/portraits');
+});
+
+app.get('/about', function(req, res) {
+	res.render('partials/about');
+});
+
+app.get('/landscapes', function(req, res) {
+	res.render('partials/landscapes');
 });
 
 var server = app.listen(process.env.PORT || 3000);
