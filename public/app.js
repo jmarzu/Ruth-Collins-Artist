@@ -9,6 +9,6 @@ $(document).ready(function() {
     fade: true,
     cssEase: 'linear',
     autoplay: true,
-    autoplaySpeed: 3500
+    autoplaySpeed: 2500
   });
 });
