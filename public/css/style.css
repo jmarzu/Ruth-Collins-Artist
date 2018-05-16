@@ -6,6 +6,7 @@ body {
 nav {
   display: flex;
   align-items: center;
+  opacity: 1.5;
 }
 
 .navbar {
@@ -45,7 +46,7 @@ nav {
 }
 
 .rc-fade__img-background-6 {
-	background: url("../images/portraits/Donnie-Almost-21.jpg") no-repeat center center;
+	background: url("../images/portraits/Donnie-1.jpg") no-repeat center center;
 }
 
 .rc-fade__img-background-7 {
@@ -133,12 +134,33 @@ nav {
 }
 
 .rc-art-page__container-img {
-	margin: 3%;
-	height: 500px;
+	margin: 1.75%;
+	height: 300px;
 }
 
 .rc-art-page__img {
 	height: 100%;
 	box-shadow: 5px 5px lightblue;
+}
+
+/* Contant and Commision Form */
+
+.rc-contact-page {
+	width: 50%;
+	margin-top: 5%;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+} 
+
+.rc-contact-page h1 {
+
+} 
+
+.rc-contact-page__copy {
+
+}
+
+.rc-contact-page__form {
+
 }
 

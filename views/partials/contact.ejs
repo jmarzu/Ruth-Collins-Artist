@@ -1,8 +1,8 @@
-<section class="rc-contact container">
+<section class="rc-contact-page container">
   <h1><%= title %> Ruth Collins Artist</h1>
-  <div class="rc-contact__copy"  id="contact">
-    <div class="row">
-        <form class="rc-contact-copy__form" name="sentMessage" id="contactForm" action="https://formspree.io/ruth.collins@att.net" method="POST" >
+  <div class="rc-contact-page__copy"  id="contact">
+    <div class="rc-contact-page__form">
+        <form name="sentMessage" id="contactForm" action="https://formspree.io/ruth.collins@att.net" method="POST" >
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name." name="name">                        
             </div>
@@ -21,3 +21,5 @@
     </div>
   </div>
 </section>
+
+<% include footer.ejs %>

@@ -52,7 +52,7 @@ app.get('/contact', function(req, res) {
 });
 
 app.get('/commisions', function(req, res) {
-	res.render('partials/contact', { title: 'Commisions' });
+	res.render('partials/contact', { title: 'Commision' });
 });
 
 app.get('/portraits', function(req, res) {
