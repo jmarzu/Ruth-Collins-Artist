@@ -5,6 +5,11 @@ var ejsLayouts = require('express-ejs-layouts');
 var app = express();
 var fs = require('fs');
 
+// Art Data
+var artData = JSON.parse(fs.readFileSync(__dirname + "/public/data.json"));
+var landscapData = artData.landscapes;
+var portraitData = artData.portraits
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -38,6 +43,7 @@ var landscapesDirectory = fs.readdirSync(landscapesDirectory).filter(function(fi
 	if (file !== '.DS_Store') {
 		landscapeArray.push('../images/landscapes/' + file);
 	}
+
 	return landscapeArray;
 });
 
@@ -64,7 +70,7 @@ app.get('/about', function(req, res) {
 });
 
 app.get('/landscapes', function(req, res) {
-	res.render('partials/landscapes', { landscapes: landscapeArray });
+	res.render('partials/landscapes', { landscapes: landscapeArray, landscapeData: landscapeData });
 });
 
 var server = app.listen(process.env.PORT || 3000);
