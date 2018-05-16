@@ -24,7 +24,9 @@ var portraitsDirectory = __dirname + "/public/images/portraits";
 var portraitArray = [];
 
 var portraitsDirectory = fs.readdirSync(portraitsDirectory).filter(function(file) {
-	portraitArray.push('../images/portraits/' + file);
+	if (file !== '.DS_Store') {
+		portraitArray.push('../images/portraits/' + file);
+	}
 	return portraitArray;
 });
 

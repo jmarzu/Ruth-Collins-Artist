@@ -119,3 +119,26 @@ nav {
 
 }
 
+/* Portrait and Landscape Page */
+
+.rc-art-page {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	justify-content: space-around;
+}
+
+.rc-art-page__title {
+	text-align: center;
+}
+
+.rc-art-page__container-img {
+	margin: 3%;
+	height: 500px;
+}
+
+.rc-art-page__img {
+	height: 100%;
+	box-shadow: 5px 5px lightblue;
+}
+

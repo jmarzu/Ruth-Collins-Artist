@@ -1,5 +1,9 @@
-<h1>Portraits</h1>
+<h1 class="rc-art-page__title">Portraits</h1>
 
-<% portraits.forEach(function(art) {%> 
-	<img src="<%= art %>">
-<%});%>
+<div class="rc-art-page">
+	<% portraits.forEach(function(art) {%> 
+		<div class="rc-art-page__container-img">
+			<img class="rc-art-page__img" src="<%= art %>">
+		</div>
+	<%});%>
+</div>
