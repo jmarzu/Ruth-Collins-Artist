@@ -19,6 +19,7 @@ app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
 // Grabbing file paths 
 
+// Portraits
 var portraitsDirectory = __dirname + "/public/images/portraits";
 var portraitArray = [];
 
@@ -27,18 +28,19 @@ var portraitsDirectory = fs.readdirSync(portraitsDirectory).filter(function(file
 	return portraitArray;
 });
 
+// Landscapes
 var landscapesDirectory = __dirname + "/public/images/landscapes";
 var landscapeArray = [];
 
 var landscapesDirectory = fs.readdirSync(landscapesDirectory).filter(function(file) {
-	landscapeArray.push('../images/landscapes/' + file);
+	if (file !== '.DS_Store') {
+		landscapeArray.push('../images/landscapes/' + file);
+	}
 	return landscapeArray;
 });
 
-landscapeArray.shift();
 
 // Routes
-
 app.get('/', function(req, res) {
   res.render('partials/main');
 });
