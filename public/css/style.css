@@ -1,6 +1,6 @@
 body {
 	margin: 0 auto;
-	background-image: radial-gradient(#88e5fc, white);
+	/*background-image: radial-gradient(#88e5fc, white);*/
 }
 
 nav {
@@ -26,7 +26,7 @@ nav {
 /* Landing Page */
 
 .rc-fade__img-background-1 {
-	background: url("../images/landscapes/4_Birds.jpg") no-repeat center center;
+	background: url("../images/landscapes/Cabin_on_the-Rolling_Road.jpg") no-repeat center center;
 }
 
 .rc-fade__img-background-2 {
@@ -34,7 +34,7 @@ nav {
 }
 
 .rc-fade__img-background-3 {
-	background: url("../images/landscapes/Cabin_on_the-Rolling_Road.jpg") no-repeat center center;
+	background: url("../images/landscapes/4_Birds.jpg") no-repeat center center;
 }
 
 .rc-fade__img-background-4 {
@@ -58,7 +58,7 @@ nav {
 }
 
 .rc-fade__img-background-9 {
-	background: url("../images/landscapes/Ramona\'s_Mail.jpg") no-repeat center center;
+	background: url("../images/landscapes/Ramonas_Mail.jpg") no-repeat center center;
 }
 
 .rc-fade__img-background-10 {
@@ -134,13 +134,13 @@ nav {
 }
 
 .rc-art-page__container-img {
-	margin: 1.75%;
+	margin: 1.25%;
 	height: 300px;
 }
 
 .rc-art-page__img {
 	height: 100%;
-	box-shadow: 5px 5px lightblue;
+	box-shadow: 5px 5px lightgrey;
 }
 
 /* Contant and Commision Form */

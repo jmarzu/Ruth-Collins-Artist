@@ -1,0 +1,28 @@
+<h1 class="rc-art-page__title"><%= title %></h1>
+
+<div class="rc-art-page">
+	<% artData.forEach(function(art) {%> 
+		<div class="rc-art-page__container-img">
+			<div data-toggle="modal" data-target="#<%= art.fileName %>" on-click="clickTest(art)">
+				<img class="rc-art-page__img" src="../images/<%= art.imagePath %>.jpg">
+			</div>
+		</div>
+
+		<div class="modal fade" id="<%= art.fileName %>" tabindex="-1" role="dialog" aria-labelledby="landscapesModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		    	<div class="modal-header">
+		    		<p><%= art.type %></p>
+		    	</div>
+		      <div class="modal-body">
+		      	<h1><%= art.title %></h1>
+		      	<p><%= art.description %></p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	<%});%>
+</div>

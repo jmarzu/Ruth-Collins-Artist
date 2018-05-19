@@ -5,11 +5,6 @@ var ejsLayouts = require('express-ejs-layouts');
 var app = express();
 var fs = require('fs');
 
-// Art Data
-var artData = JSON.parse(fs.readFileSync(__dirname + "/public/data.json"));
-var landscapData = artData.landscapes;
-var portraitData = artData.portraits
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -22,55 +17,36 @@ app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); /
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
-// Grabbing file paths 
-
-// Portraits
-var portraitsDirectory = __dirname + "/public/images/portraits";
-var portraitArray = [];
-
-var portraitsDirectory = fs.readdirSync(portraitsDirectory).filter(function(file) {
-	if (file !== '.DS_Store') {
-		portraitArray.push('../images/portraits/' + file);
-	}
-	return portraitArray;
-});
-
-// Landscapes
-var landscapesDirectory = __dirname + "/public/images/landscapes";
-var landscapeArray = [];
-
-var landscapesDirectory = fs.readdirSync(landscapesDirectory).filter(function(file) {
-	if (file !== '.DS_Store') {
-		landscapeArray.push('../images/landscapes/' + file);
-	}
-
-	return landscapeArray;
-});
+// Art Data
+var artData = JSON.parse(fs.readFileSync('./public/data.json'));
+var landscapeData = artData.landscapes;
+var portraitData = artData.portraits
 
 
 // Routes
 app.get('/', function(req, res) {
-  res.render('partials/main');
-});
-
-app.get('/contact', function(req, res) {
-	res.render('partials/contact', { title: 'Contact' });
-});
-
-app.get('/commisions', function(req, res) {
-	res.render('partials/contact', { title: 'Commision' });
+  res.render('main');
 });
 
 app.get('/portraits', function(req, res) {
-	res.render('partials/portraits', { portraits: portraitArray });
-});
-
-app.get('/about', function(req, res) {
-	res.render('partials/about');
+	res.render('art', { artData: portraitData, title: 'Portraits' });
 });
 
 app.get('/landscapes', function(req, res) {
-	res.render('partials/landscapes', { landscapes: landscapeArray, landscapeData: landscapeData });
+	res.render('art', { artData: landscapeData, title: 'Landscapes' });
+});
+
+app.get('/contact', function(req, res) {
+	res.render('contact', { title: 'Contact' });
+});
+
+app.get('/commisions', function(req, res) {
+	res.render('contact', { title: 'Commision' });
+});
+
+
+app.get('/about', function(req, res) {
+	res.render('about');
 });
 
 var server = app.listen(process.env.PORT || 3000);
