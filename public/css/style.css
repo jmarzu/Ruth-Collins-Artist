@@ -15,11 +15,16 @@ body {
 	font-family: 'Great Vibes', cursive;
 	font-size: 36px;
 	vertical-align: center;
+	color: black;
 }
 
 .rc-nav__item {
 	font-size: 16px;
-	padding: 0 5px;
+	color: black;
+}
+
+.rc-nav__item:hover, .rc-navbar-brand:hover {
+	text-decoration: none;
 }
 
 .rc-landing-page__hero {
