@@ -11,13 +11,10 @@
 		<div class="modal fade" id="<%= art.fileName %>" tabindex="-1" role="dialog" aria-labelledby="landscapesModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content rc-art-modal">
-		    	<div class="modal-header rc-art-modal__header">
-		    		<p><%= art.type %></p>
-		    	</div>
 		      <div class="modal-body rc-art-modal__body">
-		      	<img class="img-responsive" src="../images/<%= art.imagePath %>.jpg">
+		      	<img class="rc-art-modal__img" src="../images/<%= art.imagePath %>.jpg">
 		      	<h1><%= art.title %></h1>
-		      	<p><%= art.description %></p>
+		      	<p><%= art.type %></p>
 		      </div>
 		      <div class="modal-footer rc-art-modal__footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

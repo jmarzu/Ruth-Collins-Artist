@@ -3,14 +3,18 @@ body {
 	/*background-image: radial-gradient(#88e5fc, white);*/
 }
 
-nav {
+.rc-navbar {
   display: flex;
   align-items: center;
-  opacity: 1.5;
+  justify-content: space-evenly;
+  border-bottom: 1px solid lightgrey;
+  padding-top: 5px; 
 }
 
-.navbar {
-	margin-bottom: auto;
+.rc-navbar-brand {
+	font-family: 'Great Vibes', cursive;
+	font-size: 36px;
+	vertical-align: center;
 }
 
 .rc-nav__item {
@@ -127,10 +131,15 @@ nav {
 	flex-wrap: wrap;
 	overflow: hidden;
 	justify-content: space-around;
+	margin-top: 10px;
 }
 
 .rc-art-page__title {
 	text-align: center;
+	font-family: 'EB Garamond', serif;
+	font-size: 55px;
+    letter-spacing: 2px;
+    margin: 0 auto;
 }
 
 .rc-art-page__container-img {
@@ -141,6 +150,30 @@ nav {
 .rc-art-page__img {
 	height: 100%;
 	box-shadow: 5px 5px lightgrey;
+}
+
+.rc-art-modal {
+	width: auto;
+}
+
+.rc-art-modal__header {
+
+}
+
+.modal-dialog {
+    max-height: auto;
+    overflow-y: scroll;
+}
+.rc-art-modal__body h1 {
+	font-family: 'EB Garamond', serif;
+}
+
+.rc-art-modal__img {
+    width: 100%;
+}
+
+.rc-art-modal__footer {
+
 }
 
 /* Contant and Commision Form */
@@ -161,26 +194,6 @@ nav {
 }
 
 .rc-contact-page__form {
-
-}
-
-.rc-art-modal {
-
-}
-
-.rc-art-modal__img {
-	height: auto;
-}
-
-.rc-art-modal__header {
-
-}
-
-.rc-art-modal__body {
-
-}
-
-.rc-art-modal__footer {
 
 }
 
