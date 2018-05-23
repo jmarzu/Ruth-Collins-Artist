@@ -1,6 +1,9 @@
 body {
 	margin: 0 auto;
-	/*background-image: radial-gradient(#88e5fc, white);*/
+}
+
+h1 {
+	font-family: 'EB Garamond', serif;
 }
 
 .rc-navbar {
@@ -19,8 +22,10 @@ body {
 }
 
 .rc-nav__item {
-	font-size: 16px;
+	font-family: 'EB Garamond', serif;
+	font-size: 20px;
 	color: black;
+	letter-spacing: 1.5px;
 }
 
 .rc-nav__item:hover, .rc-navbar-brand:hover {
@@ -78,7 +83,7 @@ body {
 	background: url("../images/landscapes/September_Colors.jpg") no-repeat center center;
 }
 
-.rc-fade__img-backgrount-style {
+.rc-fade__img-background-style {
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
 	-o-background-size: contain;
@@ -98,7 +103,8 @@ body {
 }
 
 .rc-footer__links {
-	margin: 0 1%;
+	margin: 0 2%;
+	font-size: 26px;
 }
 
 /* About Page */
@@ -109,8 +115,8 @@ body {
 
 .rc-about-page__hero {
 	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+	justify-content: space-around;
+	padding: 5px;
 }
 
 .rc-about-page img {
@@ -118,11 +124,13 @@ body {
 }
 
 .rc-about-page__copy {
-
+	width: 50%;
 }
 
 .rc-about-page__copy h1 {
-
+	margin-top: auto; 
+	font-size: 45px;
+	letter-spacing: 2px;
 }
 
 .rc-about-page__copy p {
@@ -141,10 +149,8 @@ body {
 
 .rc-art-page__title {
 	text-align: center;
-	font-family: 'EB Garamond', serif;
 	font-size: 55px;
     letter-spacing: 2px;
-    margin: 0 auto;
 }
 
 .rc-art-page__container-img {
@@ -157,28 +163,16 @@ body {
 	box-shadow: 5px 5px lightgrey;
 }
 
-.rc-art-modal {
-	width: auto;
-}
-
-.rc-art-modal__header {
-
-}
-
-.modal-dialog {
-    max-height: auto;
-    overflow-y: scroll;
-}
-.rc-art-modal__body h1 {
+.rc-art-modal__body p {
 	font-family: 'EB Garamond', serif;
+	font-size: 16px;
 }
 
+.rc-art-modal__btn {
+	text-align: left;
+}
 .rc-art-modal__img {
     width: 100%;
-}
-
-.rc-art-modal__footer {
-
 }
 
 /* Contant and Commision Form */
@@ -188,10 +182,6 @@ body {
 	margin-top: 5%;
 	border: 1px solid lightgrey;
 	border-radius: 5px;
-} 
-
-.rc-contact-page h1 {
-
 } 
 
 .rc-contact-page__copy {

@@ -3,7 +3,7 @@
 <div class="rc-art-page">
 	<% artData.forEach(function(art) {%> 
 		<div class="rc-art-page__container-img">
-			<div data-toggle="modal" data-target="#<%= art.fileName %>" on-click="clickTest(art)">
+			<div data-toggle="modal" data-target="#<%= art.fileName %>">
 				<img class="rc-art-page__img" src="../images/<%= art.imagePath %>.jpg">
 			</div>
 		</div>
@@ -14,10 +14,10 @@
 		      <div class="modal-body rc-art-modal__body">
 		      	<img class="rc-art-modal__img" src="../images/<%= art.imagePath %>.jpg">
 		      	<h1><%= art.title %></h1>
-		      	<p><%= art.type %></p>
+      			<p><%= art.type %></p>
 		      </div>
 		      <div class="modal-footer rc-art-modal__footer">
-		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-secondary rc-art-modal__btn" data-dismiss="modal">Close</button>
 		      </div>
 		    </div>
 		  </div>
