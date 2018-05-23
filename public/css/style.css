@@ -19,13 +19,14 @@ h1 {
 	font-size: 36px;
 	vertical-align: center;
 	color: black;
+	letter-spacing: 1.5px;
 }
 
 .rc-nav__item {
 	font-family: 'EB Garamond', serif;
 	font-size: 20px;
 	color: black;
-	letter-spacing: 1.5px;
+	letter-spacing: 1.25px;
 }
 
 .rc-nav__item:hover, .rc-navbar-brand:hover {
@@ -105,6 +106,7 @@ h1 {
 .rc-footer__links {
 	margin: 0 2%;
 	font-size: 26px;
+	color: black;
 }
 
 /* About Page */
