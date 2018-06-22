@@ -44,7 +44,6 @@ app.get('/commisions', function(req, res) {
 	res.render('contact', { title: 'Commision' });
 });
 
-
 app.get('/about', function(req, res) {
 	res.render('about');
 });

@@ -1,5 +1,6 @@
 body {
 	margin: 0 auto;
+	background-color: #FDFDFD;
 }
 
 h1 {
@@ -100,7 +101,6 @@ h1 {
 
 .rc-footer {
     text-align: center;
-    margin-top: 10%;
 }
 
 .rc-footer__links {
@@ -113,6 +113,7 @@ h1 {
 
 .rc-about-page {
 	margin-top: 5%;
+	margin-bottom: 10%;
 }
 
 .rc-about-page__hero {
@@ -144,7 +145,6 @@ h1 {
 .rc-art-page {
 	display: flex;
 	flex-wrap: wrap;
-	overflow: hidden;
 	justify-content: space-around;
 	margin-top: 10px;
 }
@@ -170,9 +170,6 @@ h1 {
 	font-size: 16px;
 }
 
-.rc-art-modal__btn {
-	text-align: left;
-}
 .rc-art-modal__img {
     width: 100%;
 }
@@ -180,17 +177,31 @@ h1 {
 /* Contant and Commision Form */
 
 .rc-contact-page {
-	width: 50%;
+	display: flex;
+	justify-content: space-around;
+
 	margin-top: 5%;
-	border: 1px solid lightgrey;
-	border-radius: 5px;
+}
+
+.rc-contact-page__container {
+	
 } 
 
 .rc-contact-page__copy {
-
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	padding-right: 15px;
+    padding-left: 15px;
 }
 
 .rc-contact-page__form {
 
 }
 
+.rc-contact__btn {
+	background-color: lightgrey;
+}
+
+.rc-contact-page__img {
+	height: 75%;
+}
