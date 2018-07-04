@@ -35,7 +35,7 @@ h1 {
 }
 
 .rc-landing-page__hero {
-	margin: 0 auto;
+	margin: 0 10%;
 	height: 90%;
 }
 
@@ -95,6 +95,23 @@ h1 {
 
 .rc-fade__img {
 	width: 100%;
+}
+
+/*.slick-arrow {
+	font-weight: bold;
+  	color: grey !important;
+}*/
+
+.slick-prev:before, .slick-next:before {
+	font-weight: bold;
+  	color: grey !important;
+}
+
+.slick-prev:before {
+	content: "<";
+}
+.slick-next:before {
+  	content: ">";
 }
 
 /* Footer */

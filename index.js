@@ -40,9 +40,9 @@ app.get('/contact', function(req, res) {
 	res.render('contact', { title: 'Contact' });
 });
 
-app.get('/commisions', function(req, res) {
-	res.render('contact', { title: 'Commision' });
-});
+// app.get('/commissions', function(req, res) {
+// 	res.render('contact', { title: 'Commission' });
+// });
 
 app.get('/about', function(req, res) {
 	res.render('about');
