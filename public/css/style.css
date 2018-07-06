@@ -97,11 +97,6 @@ h1 {
 	width: 100%;
 }
 
-/*.slick-arrow {
-	font-weight: bold;
-  	color: grey !important;
-}*/
-
 .slick-prev:before, .slick-next:before {
 	font-weight: bold;
   	color: grey !important;

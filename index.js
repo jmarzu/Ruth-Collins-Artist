@@ -1,4 +1,5 @@
 var express = require('express');
+var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
 var path = require('path');
 var ejsLayouts = require('express-ejs-layouts');
@@ -22,7 +23,6 @@ var artData = JSON.parse(fs.readFileSync('./public/data.json'));
 var landscapeData = artData.landscapes;
 var portraitData = artData.portraits
 
-
 // Routes
 app.get('/', function(req, res) {
   res.render('main');
@@ -40,12 +40,35 @@ app.get('/contact', function(req, res) {
 	res.render('contact', { title: 'Contact' });
 });
 
-// app.get('/commissions', function(req, res) {
-// 	res.render('contact', { title: 'Commission' });
-// });
-
 app.get('/about', function(req, res) {
 	res.render('about');
+});
+
+// Send email for contact form  
+app.post('/contact', function(req, res) {
+	var mailOpts, smtpTrans;
+	smtpTrans = nodemailer.createTransport({
+		service: 'gmail',
+		port: 465,
+		secure: true,
+		auth: {
+			user: process.env.GMAIL_USER,
+			pass: process.env.GMAIL_PASS
+		}
+	});
+	mailOpts = {
+		from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+		to: process.env.GMAIL_USER,
+		subject: 'New message from contact form at ruthscollins.com',
+		text: req.body.name + ' ' + req.body.email + ' says: ' + req.body.message
+	};
+	smtpTrans.sendMail(mailOpts, function(error, response) {
+		if(error) {
+			res.render('contact-failure');
+		} else {
+			res.render('contact-success');
+		}
+	});
 });
 
 var server = app.listen(process.env.PORT || 3000);
