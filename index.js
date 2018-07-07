@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require('express');
 var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
@@ -28,6 +30,10 @@ app.get('/', function(req, res) {
   res.render('main');
 });
 
+// app.use("*", function(req,res) {
+//   res.status(404).send("404");
+// });
+
 app.get('/portraits', function(req, res) {
 	res.render('art', { artData: portraitData, title: 'Portraits' });
 });
@@ -37,7 +43,7 @@ app.get('/landscapes', function(req, res) {
 });
 
 app.get('/contact', function(req, res) {
-	res.render('contact', { title: 'Contact' });
+	res.render('contact');
 });
 
 app.get('/about', function(req, res) {
@@ -49,11 +55,13 @@ app.post('/contact', function(req, res) {
 	var mailOpts, smtpTrans;
 	smtpTrans = nodemailer.createTransport({
 		service: 'gmail',
-		port: 465,
-		secure: true,
 		auth: {
-			user: process.env.GMAIL_USER,
-			pass: process.env.GMAIL_PASS
+			type: "OAuth2",
+		    user: process.env.GMAIL_USER,
+		    clientId: process.env.CLIENT_ID,
+		    clientSecret: process.env.CLIENT_SECRET,
+		    refreshToken: process.env.REFRESH_TOKEN,
+		    accessToken: process.env.ACCESS_TOKEN 
 		}
 	});
 	mailOpts = {
@@ -69,6 +77,22 @@ app.post('/contact', function(req, res) {
 			res.render('contact-success');
 		}
 	});
+});
+
+var RECAPTCHA_SECRET = process.env.SECRET_KEY;
+
+app.post("/contact", function(request, response) {
+    var recaptcha_url = "https://www.google.com/recaptcha/api/siteverify?";
+    recaptcha_url += "secret=" + RECAPTCHA_SECRET + "&";
+    recaptcha_url += "response=" + request.body["g-recaptcha-response"] + "&";
+    recaptcha_url += "remoteip=" + request.connection.remoteAddress;
+    Request(recaptcha_url, function(error, resp, body) {
+        body = JSON.parse(body);
+        if(body.success !== undefined && !body.success) {
+            return response.send({ "message": "Captcha validation failed" });
+        }
+        response.header("Content-Type", "application/json").send(body);
+    });
 });
 
 var server = app.listen(process.env.PORT || 3000);
