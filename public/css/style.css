@@ -162,7 +162,7 @@ h1 {
   	content: ">";
 }
 
-@media screen and (max-width: 375px;) {
+@media screen and (max-width: 375px) {
 	.rc-landing-page__hero {
 		height: 100%;
 	}
@@ -188,23 +188,33 @@ h1 {
 }
 
 .rc-about-page__hero {
-	display: flex;
-	justify-content: space-around;
-	padding: 5px;
+	display: block;
 }
 
 .rc-about-page img {
 	height: auto;
 }
 
-.rc-about-page__copy {
-	width: 50%;
+.rc-about-page_copy {
+	width: 100%;
 }
 
 .rc-about-page__copy h1 {
 	margin-top: auto; 
 	font-size: 45px;
 	letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+	.rc-about-page__hero {
+		display: flex;
+		justify-content: space-around;
+		padding: 5px;
+	}
+
+	.rc-about-page__copy {
+		width: 50%;
+	}
 }
 
 /* Portrait and Landscape Page */
@@ -241,7 +251,7 @@ h1 {
     width: 100%;
 }
 
-@media screen and (max-width: 375px;) {
+@media screen and (max-width: 375px) {
 	.rc-art-page__container-img {
 		height: 250px;
 	}
