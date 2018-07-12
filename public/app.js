@@ -10,7 +10,7 @@ $(document).ready(function() {
     fade: true,
     cssEase: 'linear',
     autoplay: true,
-    autoplaySpeed: 2500
+    autoplaySpeed: 3000
   });
 
   window.onload = function() {
@@ -20,7 +20,19 @@ $(document).ready(function() {
         $recaptcha.setAttribute("required", "required");
     }
   };
+
+  $('#HBmenu').on('click', function(event) {
+    event.preventDefault();
+    var navItem = $('.rc-nav__item');
+    if(navItem.css("display") === "none") {
+        navItem.css("display", "block");
+    } else if (navItem.css("display") === "block")  {
+          navItem.css("display", "none");
+    }
+  });
+
 });
+
 
 
 

@@ -34,13 +34,53 @@ h1 {
 	text-decoration: none;
 }
 
-@media screen and (max-width: 425px) {
+.rc-nav__hamburger-menu {
+	display: none;
+}
+
+@media screen and (max-width: 375px) {
+	.rc-navbar {
+		display: block;
+	}
+
 	.rc-navbar-brand {
 		font-size: 16px;
+		margin-left: 
 	}
 
 	.rc-nav__item {
 		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.rc-navbar {
+		display: block;
+		padding: 5px 5px 0 5px; 
+	}
+
+	.rc-navbar-brand {
+		font-size: 16px; 
+	}
+
+	.rc-nav__item {
+		display: none;
+		font-size: 12px; 
+	}
+
+	.rc-nav__item__mobile:not(:last-child) {
+		border-bottom: 1px solid lightgrey;
+	}
+
+	.rc-nav__hamburger-menu {
+		display: inline;
+		float: right;
+		margin-right: 3%;
+		color: black;
+	}
+
+	.rc-nav__item__mobile {
+		display: none;
 	}
 }
 
@@ -112,6 +152,7 @@ h1 {
 	font-size: 40px;
 	font-weight: lighter;
   	color: black !important;
+  	font-family: 'EB Garamond', serif;
 }
 
 .slick-prev:before {
@@ -121,7 +162,7 @@ h1 {
   	content: ">";
 }
 
-@media screen and (max-width: 425px;) {
+@media screen and (max-width: 375px;) {
 	.rc-landing-page__hero {
 		height: 100%;
 	}
