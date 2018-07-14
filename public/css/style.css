@@ -38,6 +38,30 @@ h1 {
 	display: none;
 }
 
+@media screen and (max-width: 768px) {
+	.rc-navbar {
+		display: block;
+		padding: 5px 5px 0 5px; 
+	}
+
+	.rc-nav__item__mobile:not(:last-child) {
+		border-bottom: 1px solid lightgrey;
+	}
+
+	.rc-nav__hamburger-menu {
+		display: inline;
+		float: right;
+		margin-right: 3%;
+		margin-top: 15px; 
+		color: black;
+		font-size: 20px;
+	}
+
+	.rc-nav__item__mobile {
+		display: none;
+	}
+}
+
 @media screen and (max-width: 375px) {
 	.rc-navbar {
 		display: block;
@@ -55,30 +79,6 @@ h1 {
 		margin-top: 5px; 
 	}
 }
-
-@media screen and (max-width: 768px) {
-	.rc-navbar {
-		display: block;
-		padding: 5px 5px 0 5px; 
-	}
-
-	.rc-nav__item__mobile:not(:last-child) {
-		border-bottom: 1px solid lightgrey;
-	}
-
-	.rc-nav__hamburger-menu {
-		display: inline;
-		float: right;
-		margin-right: 3%;
-		margin-top: 15px; 
-		color: black;
-	}
-
-	.rc-nav__item__mobile {
-		display: none;
-	}
-}
-
 
 /* Landing Page */
 
@@ -200,7 +200,21 @@ h1 {
 	letter-spacing: 2px;
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
+	.rc-about-page {
+		padding: 0 5%;
+	}
+
+	.rc-about-page__copy {
+		padding-left: 3%;
+	}
+
+	.rc-about-page__copy h1 { 
+		font-size: 40px;
+	}
+}
+
+@media screen and (min-width: 768px) {
 	.rc-about-page__hero {
 		display: flex;
 		justify-content: space-around;
