@@ -1,8 +1,8 @@
 {
 	"landscapes": [
 		{
-			"fileName": "4_birds",
-			"imagePath" :"landscapes/4_birds",
+			"fileName": "Birds",
+			"imagePath" :"landscapes/Birds",
 			"title": "4 Birds",
 			"type" : "16x20 acrylic on canvas",
 			"description": "A favorite tree I see on my way to the post office, in all its Spring glory"
@@ -95,7 +95,7 @@
 	"portraits": [
 		{
 			"fileName": "A-Work-In-Progress",
-			"imagePath" :"portraits/A-Work-In-Progress",
+			"imagePath" :"portraits/Work-In-Progress",
 			"title": "A Work In Progress",
 			"type" : "14x11 acrylic on canvas",
 			"description": "My son, the aspiring writer, when he found time to do that."
