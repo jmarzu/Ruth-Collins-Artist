@@ -57,6 +57,14 @@ h1 {
 		font-size: 20px;
 	}
 
+	.rc-navbar-brand {
+		font-size: 36px; 
+	}
+
+	.rc-nav__item {
+		font-size: 24px;
+	}
+
 	.rc-nav__item__mobile {
 		display: none;
 	}
@@ -68,15 +76,15 @@ h1 {
 	}
 
 	.rc-navbar-brand {
-		font-size: 24px; 
+		font-size: 30px; 
 	}
 
 	.rc-nav__item {
-		font-size: 16px;
+		font-size: 20px;
 	}
 
 	.rc-nav__hamburger-menu {
-		margin-top: 5px; 
+		margin-top: 7px; 
 	}
 }
 

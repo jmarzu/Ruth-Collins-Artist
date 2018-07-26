@@ -5,6 +5,7 @@ var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
 var path = require('path');
 var ejsLayouts = require('express-ejs-layouts');
+var request = require('request');
 var app = express();
 var fs = require('fs');
 
@@ -75,20 +76,22 @@ app.post('/contact', function(req, res) {
 	});
 });
 
-var RECAPTCHA_SECRET = process.env.SECRET_KEY;
+// reCaptcha verification
+app.post('/contact',function(req, res){
+  if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
+    return res.json({"responseCode" : 1,"responseDesc" : "Please select captcha"});
+  }
 
-app.post("/contact", function(request, response) {
-    var recaptcha_url = "https://www.google.com/recaptcha/api/siteverify?";
-    recaptcha_url += "secret=" + RECAPTCHA_SECRET + "&";
-    recaptcha_url += "response=" + request.body["g-recaptcha-response"] + "&";
-    recaptcha_url += "remoteip=" + request.connection.remoteAddress;
-    Request(recaptcha_url, function(error, resp, body) {
-        body = JSON.parse(body);
-        if(body.success !== undefined && !body.success) {
-            return response.send({ "message": "Captcha validation failed" });
-        }
-        response.header("Content-Type", "application/json").send(body);
-    });
+  var secretKey = process.env.SECRET_KEY;
+  var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+
+  request(verificationUrl,function(error, response, body) {
+    body = JSON.parse(body);
+    if(body.success !== undefined && !body.success) {
+      return res.json({"responseCode" : 1,"responseDesc" : "Failed captcha verification"});
+    }
+    res.render('contact-success');
+  });
 });
 
 var server = app.listen(process.env.PORT || 3000);
