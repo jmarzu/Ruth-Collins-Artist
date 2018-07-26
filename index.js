@@ -75,21 +75,21 @@ app.post('/contact', function(req, res) {
 	});
 });
 
-// var RECAPTCHA_SECRET = process.env.SECRET_KEY;
+var RECAPTCHA_SECRET = process.env.SECRET_KEY;
 
-// app.post("/contact", function(request, response) {
-//     var recaptcha_url = "https://www.google.com/recaptcha/api/siteverify?";
-//     recaptcha_url += "secret=" + RECAPTCHA_SECRET + "&";
-//     recaptcha_url += "response=" + request.body["g-recaptcha-response"] + "&";
-//     recaptcha_url += "remoteip=" + request.connection.remoteAddress;
-//     Request(recaptcha_url, function(error, resp, body) {
-//         body = JSON.parse(body);
-//         if(body.success !== undefined && !body.success) {
-//             return response.send({ "message": "Captcha validation failed" });
-//         }
-//         response.header("Content-Type", "application/json").send(body);
-//     });
-// });
+app.post("/contact", function(request, response) {
+    var recaptcha_url = "https://www.google.com/recaptcha/api/siteverify?";
+    recaptcha_url += "secret=" + RECAPTCHA_SECRET + "&";
+    recaptcha_url += "response=" + request.body["g-recaptcha-response"] + "&";
+    recaptcha_url += "remoteip=" + request.connection.remoteAddress;
+    Request(recaptcha_url, function(error, resp, body) {
+        body = JSON.parse(body);
+        if(body.success !== undefined && !body.success) {
+            return response.send({ "message": "Captcha validation failed" });
+        }
+        response.header("Content-Type", "application/json").send(body);
+    });
+});
 
 var server = app.listen(process.env.PORT || 3000);
 
