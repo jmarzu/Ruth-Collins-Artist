@@ -47,7 +47,7 @@ app.get('/about', function(req, res) {
 	res.render('about');
 });
 
-// Send email for contact form  
+// Send email for contact form with google recaptcha
 app.post('/contact', function(req, res) {
 	var mailOpts, smtpTrans;
 	smtpTrans = nodemailer.createTransport({
@@ -68,30 +68,21 @@ app.post('/contact', function(req, res) {
 		text: req.body.name + ' ' + req.body.email + ' says: ' + req.body.message
 	};
 	smtpTrans.sendMail(mailOpts, function(error, response) {
-		if(error) {
-			res.render('contact-failure');
-		} else {
-			res.render('contact-success');
-		}
+		if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
+	      return res.json({"responseCode" : 1,"responseDesc" : "Please select captcha"});
+	    }
+
+	    var secretKey = process.env.SECRET_KEY;
+	    var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+
+	    request(verificationUrl, function(err, resp, body) {
+	      body = JSON.parse(body);
+	      if(body.success !== undefined && !body.success) {
+	        return res.json({"responseCode" : 1,"responseDesc" : "Failed captcha verification"});
+	      }
+	      res.render('contact-success');
+	    });
 	});
-});
-
-// reCaptcha verification
-app.post('/contact',function(req, res){
-  if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
-    return res.json({"responseCode" : 1,"responseDesc" : "Please select captcha"});
-  }
-
-  var secretKey = process.env.SECRET_KEY;
-  var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
-
-  request(verificationUrl,function(error, response, body) {
-    body = JSON.parse(body);
-    if(body.success !== undefined && !body.success) {
-      return res.json({"responseCode" : 1,"responseDesc" : "Failed captcha verification"});
-    }
-    res.render('contact-success');
-  });
 });
 
 var server = app.listen(process.env.PORT || 3000);

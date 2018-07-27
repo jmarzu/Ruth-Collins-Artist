@@ -30,6 +30,8 @@
     "express-recaptcha": "^4.0.2",
     "fs": "0.0.1-security",
     "jquery": "^3.3.1",
+    "jquery-form-validator": "^2.3.77",
+    "jquery-serializejson": "^2.8.1",
     "nodemailer": "^4.6.7",
     "npm": "^6.0.1",
     "path": "^0.12.7",
