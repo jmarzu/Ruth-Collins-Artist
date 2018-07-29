@@ -34,6 +34,8 @@ $(document).ready(function() {
           navItem.css("display", "none");
     }
   });
+
+  
 });
 
 

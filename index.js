@@ -73,7 +73,7 @@ app.post('/contact', function(req, res) {
 	    }
 
 	    var secretKey = process.env.SECRET_KEY;
-	    var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+	    var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=6Le_uGIUAAAAAHKvGQna8woT767feCg5qEVPpKSL&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
 
 	    request(verificationUrl, function(err, resp, body) {
 	      body = JSON.parse(body);
