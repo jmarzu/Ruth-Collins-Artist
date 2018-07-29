@@ -68,6 +68,8 @@ app.post('/contact', function(req, res) {
 		text: req.body.name + ' ' + req.body.email + ' says: ' + req.body.message
 	};
 	smtpTrans.sendMail(mailOpts, function(error, response) {
+		console.log(response);
+		console.log(error);
 		if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
 	      return res.json({"responseCode" : 1,"responseDesc" : "Please select captcha"});
 	    }
@@ -78,6 +80,7 @@ app.post('/contact', function(req, res) {
 	    request(verificationUrl, function(err, resp, body) {
 	      body = JSON.parse(body);
 	      console.log('body', body);
+	      console.log('resp', resp);
 	      if(body.success !== undefined && !body.success) {
 	        return res.json({"responseCode" : 1,"responseDesc" : "Failed captcha verification"});
 	      }
