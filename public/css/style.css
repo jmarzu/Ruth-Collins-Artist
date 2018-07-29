@@ -350,4 +350,5 @@ h1 {
 .contact-success-failure-img {
 	height: 500px;
 	margin: 0 auto;
+	max-width: 100%;
 }

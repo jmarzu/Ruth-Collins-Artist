@@ -38,23 +38,6 @@
     <%- body %>
 
     <script src="/js/jquery.min.js"></script>
-
-    <script>
-    $(document).ready(function() {
-      $('#rc-contact-form').submit(function() {
-        $(this).ajaxSubmit({
-          error: function(xhr) {
-            status('Error: ' + xhr.status);
-          },
-         success: function(response) {
-          console.log(response);
-         }
-        });
-        //Very important line, it disable the page refresh.
-        return false;
-      });
-    });
-  </script>
     <script src="bundle.js"></script>
     <script src="/js/bootstrap.min.js"></script>
   </body>
