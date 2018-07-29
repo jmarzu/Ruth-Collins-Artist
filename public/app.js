@@ -33,9 +33,7 @@ $(document).ready(function() {
     } else if (navItem.css("display") === "block")  {
           navItem.css("display", "none");
     }
-  });
-
-  
+  });  
 });
 
 
