@@ -77,6 +77,7 @@ app.post('/contact', function(req, res) {
 
 	    request(verificationUrl, function(err, resp, body) {
 	      body = JSON.parse(body);
+	      console.log('body', body);
 	      if(body.success !== undefined && !body.success) {
 	        return res.json({"responseCode" : 1,"responseDesc" : "Failed captcha verification"});
 	      }
