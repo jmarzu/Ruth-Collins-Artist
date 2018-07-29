@@ -256,16 +256,13 @@ h1 {
 
 .rc-art-page__img {
 	height: 100%;
+	max-width: 100%;
 	box-shadow: 5px 5px lightgrey;
 }
 
 .rc-art-modal__body p {
 	font-family: 'EB Garamond', serif;
 	font-size: 16px;
-}
-
-.rc-art-modal__img {
-    width: 100%;
 }
 
 @media screen and (max-width: 375px) {
