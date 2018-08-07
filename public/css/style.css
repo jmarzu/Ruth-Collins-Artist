@@ -8,20 +8,8 @@ h1 {
 }
 
 .rc-navbar {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
   align-items: center;
-  -webkit-justify-content: space-evenly;
-  -moz-justify-content: space-evenly;
-  -ms-justify-content: space-evenly;
-  -o-justify-content: space-evenly;
   justify-content: space-evenly;
   border-bottom: 1px solid lightgrey;
   padding-top: 5px;
@@ -152,6 +140,14 @@ h1 {
 }
 
 .rc-fade__img-background-style {
+	-webkit-background-size: contain;	
+	-moz-background-size: contain;	
+	-o-background-size: contain;	
+	background-size: contain;		
+	height: 100%;
+}
+
+.rc-fade__img-background-style {
 	background-size: contain;
 	height: 100%;
 }
@@ -233,15 +229,7 @@ h1 {
 
 @media screen and (min-width: 768px) {
 	.rc-about-page__hero {
-	  display: -webkit-flex;
-	  display: -moz-flex;
-	  display: -ms-flex;
-	  display: -o-flex;
 	  display: flex;
-	  -webkit-justify-content: space-around;
-	  -moz-justify-content: space-around;
-	  -ms-justify-content: space-around;
-	  -o-justify-content: space-around;
 	  justify-content: space-around;
 	  padding: 5px;
 	}
@@ -254,20 +242,8 @@ h1 {
 /* Portrait and Landscape Page */
 
 .rc-art-page {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  -o-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
   justify-content: space-around;
   margin-top: 10px;
 }
@@ -303,15 +279,7 @@ h1 {
 /* Contant and Commision Form */
 
 .rc-contact-page {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
   justify-content: space-around;
   margin-top: 5%;
   margin-bottom: 20px;
@@ -344,15 +312,7 @@ h1 {
 }
 
 .form-submission-nav-links {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
   justify-content: space-around;
 }
 

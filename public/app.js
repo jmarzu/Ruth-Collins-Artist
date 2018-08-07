@@ -28,12 +28,14 @@ $(document).ready(function() {
   $('#HBmenu').on('click', function(event) {
     event.preventDefault();
     var navItem = $('.rc-nav__item');
+
     if(navItem.css("display") === "none") {
         navItem.css("display", "block");
-    } else if (navItem.css("display") === "block")  {
-          navItem.css("display", "none");
+    } else {
+        navItem.css("display", "none");
     }
   });  
+  
 });
 
 
