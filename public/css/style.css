@@ -1,3 +1,7 @@
+html, body {
+	height: 100%;
+}
+
 body {
 	margin: 0 auto;
 	background-color: #FDFDFD;
@@ -8,21 +12,15 @@ h1 {
 }
 
 .rc-navbar {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -webkit-justify-content: space-evenly;
-  -moz-justify-content: space-evenly;
-  -ms-justify-content: space-evenly;
-  -o-justify-content: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   border-bottom: 1px solid lightgrey;
   padding-top: 5px;
 }
@@ -43,11 +41,7 @@ h1 {
 }
 
 .rc-nav__item:hover, .rc-navbar-brand:hover {
-  -webkit-text-decoration: none;
-  -moz-text-decoration: none;
-  -ms-text-decoration: none;
-  -o-text-decoration: none;
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .rc-nav__hamburger-menu {
@@ -155,13 +149,18 @@ h1 {
 	background: url("../images/landscapes/September_Colors.jpg") no-repeat center center;
 }
 
+.rc-fade__img-background-style {	
+	background-size: contain;		
+	height: 100%;
+}
+
 .rc-fade__img-background-style {
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -ms-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
-  height: 100%;
+	background-size: contain;
+	height: 100%;
+}
+
+.rc-fade__img {
+	width: 100%;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -207,6 +206,10 @@ h1 {
 	display: block;
 }
 
+.rc-about-page img {
+	height: auto;
+}
+
 .rc-about-page_copy {
 	width: 100%;
 }
@@ -233,16 +236,11 @@ h1 {
 
 @media screen and (min-width: 768px) {
 	.rc-about-page__hero {
-	  display: -webkit-flex;
-	  display: -moz-flex;
-	  display: -ms-flex;
-	  display: -o-flex;
+	  display: -webkit-box;
+	  display: -ms-flexbox;
 	  display: flex;
-	  -webkit-justify-content: space-around;
-	  -moz-justify-content: space-around;
-	  -ms-justify-content: space-around;
-	  -o-justify-content: space-around;
-	  justify-content: space-around;
+	  -ms-flex-pack: distribute;
+	      justify-content: space-around;
 	  padding: 5px;
 	}
 
@@ -254,21 +252,13 @@ h1 {
 /* Portrait and Landscape Page */
 
 .rc-art-page {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  -o-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-top: 10px;
 }
 
@@ -284,18 +274,19 @@ h1 {
 }
 
 .rc-art-page__img {
-  height: 100%;
-  max-width: 100%;
-  -webkit-box-shadow: 5px 5px lightgrey;
-  -moz-box-shadow: 5px 5px lightgrey;
-  -ms-box-shadow: 5px 5px lightgrey;
-  -o-box-shadow: 5px 5px lightgrey;
-  box-shadow: 5px 5px lightgrey;
+	height: 100%;
+	max-width: 100%;
+	-webkit-box-shadow: 5px 5px lightgrey;
+	        box-shadow: 5px 5px lightgrey;
 }
 
 .rc-art-modal__body p {
 	font-family: 'EB Garamond', serif;
 	font-size: 16px;
+}
+
+.modal-content {
+	
 }
 
 @media screen and (max-width: 375px) {
@@ -307,16 +298,11 @@ h1 {
 /* Contant and Commision Form */
 
 .rc-contact-page {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-top: 5%;
   margin-bottom: 20px;
 }
@@ -338,30 +324,21 @@ h1 {
 }
 
 #g-recaptcha-response {
-  display: block !important;
-  position: absolute;
-  margin: -78px 0 0 0 !important;
-  width: 302px !important;
-  height: 76px !important;
-  z-index: -999999;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  -ms-opacity: 0;
-  -o-opacity: 0;
-  opacity: 0;
+    display: block !important;
+    position: absolute;
+    margin: -78px 0 0 0 !important;
+    width: 302px !important;
+    height: 76px !important;
+    z-index: -999999;
+    opacity: 0;
 }
 
 .form-submission-nav-links {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media (max-width: 375px) {
@@ -392,7 +369,7 @@ h1 {
 	}
 
 	.rc-contact-page__title {
-		font-size: : 30px;
+		font-size: 30px;
 	}
 
 	.rc-contact-page__img {
