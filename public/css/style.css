@@ -18,9 +18,9 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: space-around;
+      -ms-flex-pack: space-around;
+          justify-content: space-around;
   border-bottom: 1px solid lightgrey;
   padding-top: 5px;
 }
@@ -260,6 +260,7 @@ h1 {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 10px;
+  width: 100%;
 }
 
 .rc-art-page__title {
@@ -286,7 +287,7 @@ h1 {
 }
 
 .modal-content {
-	
+
 }
 
 @media screen and (max-width: 375px) {
