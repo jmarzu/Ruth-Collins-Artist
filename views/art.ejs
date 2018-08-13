@@ -3,9 +3,10 @@
 <div class="rc-art-page">
 	<% artData.forEach(function(art) {%> 
 		<div class="rc-art-page__container-img">
-			<div data-toggle="modal" data-target="#<%= art.fileName %>">
-				<img class="rc-art-page__img" src="../images/<%= art.imagePath %>.jpg">
-			</div>
+			<img 
+				class="rc-art-page__img" 
+				src="../images/<%= art.imagePath %>.jpg"
+				data-toggle="modal" data-target="#<%= art.fileName %>">
 		</div>
 
 		<div class="modal fade" id="<%= art.fileName %>" tabindex="-1" role="dialog" aria-labelledby="landscapesModalLabel" aria-hidden="true">
