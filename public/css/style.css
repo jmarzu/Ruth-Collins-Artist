@@ -321,7 +321,7 @@ h1 {
 }
 
 .rc-contact-page__img {
-	height: 75%;
+	max-height: 475px;
 }
 
 #g-recaptcha-response {
