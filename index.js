@@ -18,13 +18,13 @@ app.set('view engine', 'ejs');
 app.use(ejsLayouts);
 
 // Add Css Vendor Prefixs
-app.use('/css', postCssMiddleware({
-		plugins: [ require('autoprefixer') ],
-		src: function(req) {
-			return path.join('styles', req.path);
-		}
-	})
-);
+// app.use('/css', postCssMiddleware({
+// 		plugins: [ require('autoprefixer') ],
+// 		src: function(req) {
+// 			return path.join('styles', req.path);
+// 		}
+// 	})
+// );
 
 // Bootstrap
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
@@ -98,12 +98,6 @@ app.post('/contact', function(req, res) {
 app.post('http://expressprefixr.herokuapp.com/api/processor', function(req, res) {
 	console.log(res);
 });
-
-// request('http://www.google.com', function (error, response, body) {
-//   if (!error && response.statusCode == 200) {
-//     console.log(body) // Print the google web page.
-//   }
-// })
 
 var server = app.listen(process.env.PORT || 3000);
 
