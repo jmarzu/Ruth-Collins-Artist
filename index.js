@@ -17,15 +17,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
 
-// Add Css Vendor Prefixs
-// app.use('/css', postCssMiddleware({
-// 		plugins: [ require('autoprefixer') ],
-// 		src: function(req) {
-// 			return path.join('styles', req.path);
-// 		}
-// 	})
-// );
-
 // Bootstrap
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
